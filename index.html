@@ -16,16 +16,69 @@
 
 <body>
     <div class="main-container">
+        <!--header logo and links-->
+        <!--si tu ne veut pas te prendre la tête, tu ne fait une div qui prend un width de 100%, dedans tu met ton logo et une div avec ta navbar.
+avec un display flex ils seront à l'horizontale et tu met un justify-content: space-between;
+Comme ca ils seront toujours au début et fin.-->
         <header>
-            <img src="images/logo/Booki.png" alt="logo de l'entreprise">
+            <div class="logo">
+                <img src="images/logo/Booki.png" alt="logo de l'entreprise">
+                <div class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="#hebergements" class="nav-link">Hébergements</a></li>
+                        <li><a href="#activites" class="nav-link">Activités</a></li>
+                    </ul>
+                </div>    
+            </div>
         </header>
         <nav>
+            <!--search button with filters-->
+            <h2>Trouver vôtre hébergement pour des vacances de rêve</h2>
+            <p>En plein centre-ville ou en pleine nature</p>
+            <!--since the form is used to search for a location i use the imput type search-->
+                <form action="" method="get">
+                    <label for="ville"><i class="fa-sharp fa-solid fa-location-dot"></i></i></label>
+                    <input type="search" name="ville" id="ville" required>
+                    <input type="submit" value="Rechercher"/>
+                </form>
+                <section class="filtres">
+                        <h2 class="section-title">Filtres</h2>
+                        <a href="#" class="filter-card">
+                            <div class="card-content">
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                                <h3 class="filtres-title">Économique</h3>
+                            </div>
+                        </a>
+                        <a href="#" class="filter-card">
+                            <div class="card-content">
+                                <i class="fa-solid fa-person"></i>
+                                <h3 class="filtres-title">Familial</h3>
+                            </div>
+                        </a>
+                        <a href="#" class="filter-card">
+                            <div class="card-content">
+                                <i class="fa-solid fa-heart"></i>
+                                <h3 class="filtres-title">Romantique</h3>
+                            </div>
+                        </a>
+                        <a href="#" class="filter-card">
+                            <div class="card-content">
+                                <i class="fa-solid fa-fire"></i>
+                                <h3 class="filtres-title">Nos pépites</span>
+                            </div>
+                        </a>                    
+                </section>
+                <p>
+                    <i class="fa-solid fa-info"></i>
+                    <span class="infotext">plus de 500 logements sont disponibles dans cette ville</span>
+                </p>
         </nav>
         <main>
             <div class="hebergements-and-populaires">
+                <!--search results-->
                 <section class="hebergements">
                     <div class="hebergements-title">
-                        <h2 class="section-title">Hébergements à Marseille</h2>
+                        <h2 id="hebergements" class="section-title">Hébergements à Marseille</h2>
                     </div>
                     <div class="hebergements-cards">
                         <a href="#" class="card">
@@ -130,8 +183,10 @@
                                     </div>
                                 </div>
                         </a>
-                    </div>
+                    </div> 
+                        <h2>Afficher plus</h2>             
                 </section>
+                <!--most popular search results-->
                 <section class="populaires">
                     <div class="populaires-title">
                         <h2 class="section-title">Les plus populaires</h2>
@@ -192,10 +247,71 @@
                     </div>
                 </section>
             </div>
-            <div class="activites">
-            </div>
+                <div class="activites">
+                    <h2 id="activites">Activités à Marseille</h2>
+                    <div class="activites-cards">
+                        <a href="#" class="card">
+                            <img src="./images/activites/reno-laithienne.jpg" alt="photo du vieux-port">
+                            <div class="card-content">
+                                <div class="card-txt">
+                                    <h3 class="card-title">Vieux-Port</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="card">
+                            <img src="./images/activites/paul-hermann.jpg" alt="photo du fort de pomègues">
+                            <div class="card-content">
+                                <div class="card-txt">
+                                    <h3 class="card-title">Fort de pomègues</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="card">
+                            <img src="./images/activites/kilyan-sockalingum.jpg" alt="photo du parc national des calenques">
+                            <div class="card-content">
+                                <div class="card-txt">
+                                    <h3 class="card-title">Parc national des calenques</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="card">
+                            <img src="./images/activites/florian-wehde.jpg" alt="photo de Notre dame de la garde">
+                            <div class="card-content">
+                                <div class="card-txt">
+                                    <h3 class="card-title">Notre Dame de la Garde</h3>
+                                </div>
+                            </div>
+                        </a>                        
+                    </div>
+                </div>
         </main>
-        <footer></footer>
+
+        <footer>
+            <section class="fonctionnement">
+                <div class="a-propos">
+                    <h3>A propos</h3>
+                    <a href="#">Fonctionnement du site</a>
+                    <p>
+                        <a href="#">Condition générales</a>
+                    </p>
+                    <a href="#">données et confidentialité</a>
+                </div>
+                <div class="nos-hebergements">
+                    <h3>Nos hébergements</h3>
+                    <a href="#">Charte de qualité</a>
+                    <p>
+                        <a href="#">Proposer votre hôtel</a>
+                    </p>
+                </div>
+                <div class="assistance">
+                    <h3>Assistance</h3>
+                    <a href="#">Centre d'aide</a>
+                    <p>
+                        <a href="#">Nous contacter</a>
+                    </p>
+                </div>
+            </section>
+        </footer>
     </div>
 </body>
 
