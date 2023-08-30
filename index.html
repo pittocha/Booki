@@ -23,7 +23,7 @@
                 <div class="navbar">
                     <ul class="nav-list">
                         <li><a href="#hebergements" class="nav-link">Hébergements</a></li>
-                        <li><a href="#activites" class="nav-link">Activités</a></li>
+                        <li><a href="#activites-title" class="nav-link">Activités</a></li>
                     </ul>
                 </div>    
             </div>
@@ -35,9 +35,9 @@
             <!--since the form is used to search for a location i use the imput type search-->
                 <form action="#" method="get">
                     <label for="ville"><i class="fa-sharp fa-solid fa-location-dot"></i></label>
-                    <input type="search" name="ville" id="ville" required>
+                    <input type="search" name="ville" id="ville" placeholder="Marseille, France" required>
                     <input type="submit" value="Rechercher" class="bouton-rechercher">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button><!--insertion of both button for mobile and desktop-->
                 </form>
                 <section class="filtres">
                         <h2 class="section-title">Filtres</h2>
@@ -182,7 +182,7 @@
                                 </div>
                         </a>                        
                     </div> 
-                        <a href="#"><h2>Afficher plus</h2></a>    
+                        <a href="#" class="expand"><h2>Afficher plus</h2></a>    
                 </section>
                 <!--most popular search results-->
                 <section class="populaires">
@@ -246,7 +246,7 @@
                 </section>
             </div>
             <!--activity section-->
-            <div class="activites">
+            <section class="activites">
                 <h2 id="activites-title">Activités à Marseille</h2>
                 <div class="activites-cards">
                     <a href="#" class="card">
@@ -282,7 +282,7 @@
                         </div>
                     </a>                        
                 </div>
-            </div>
+            </section>
         </main>
         <footer>
             <!--contact, help and other legal stuff-->
